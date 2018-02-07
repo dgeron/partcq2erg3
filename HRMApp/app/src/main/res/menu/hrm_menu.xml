@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item android:id="@+id/Item1"
+            android:title="@string/Item1" />
+        <item android:id="@+id/Item2"
+            android:title="@string/Item2" />
+    </group>
+    <group>
+        <item android:id="@+id/Item3"
+            android:title="@string/Item3" />
+        <item android:id="@+id/Item4"
+            android:title="@string/Item4" />
+    </group>
+    <group>
+        <item android:id="@+id/Item5"
+            android:title="@string/Item5" />
+        <item android:id="@+id/Item6"
+            android:title="@string/Item6" />
+    </group>
+</menu>

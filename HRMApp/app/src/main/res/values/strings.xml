@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">HRMApp</string>
+    <string name="Item1">User Profile</string>
+    <string name="Item2">Automation Menu</string>
+    <string name="Item3">Facebook</string>
+    <string name="Item4">Community Net</string>
+    <string name="Item5">Statistics</string>
+    <string name="Item6">Exit</string>
+    <string name="title_activity_user_profile">User Profile</string>
+    <string name="title_activity_statistics">Statistics</string>
+    <!-- Strings related to Settings -->
+</resources>

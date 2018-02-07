@@ -1,0 +1,78 @@
+Appliances;Time;Daily consumption in KW;Cost per day in euro;Team
+Air-condition;20180201;20;3;Pelloponisioi
+Air-condition;20180202;14;2,1;Pelloponisioi
+Air-condition;20180203;20;3;Pelloponisioi
+Air-condition;20180204;20;3;Pelloponisioi
+Air-condition;20180205;20;3;Pelloponisioi
+Air-condition;20180206;14;2,1;Pelloponisioi
+Air-condition;20180207;11;1,65;Pelloponisioi
+Computer;20180201;1,5;0,21;Pelloponisioi
+Computer;20180202;1,75;0,245;Pelloponisioi
+Computer;20180203;1,5;0,21;Pelloponisioi
+Computer;20180204;1,5;0,21;Pelloponisioi
+Computer;20180205;1,5;0,21;Pelloponisioi
+Computer;20180206;1,5;0,21;Pelloponisioi
+Computer;20180207;1,5;0,21;Pelloponisioi
+Dish Washer;20180201;3,2;0,4;Pelloponisioi
+Dish Washer;20180202;2,9;0,38;Pelloponisioi
+Dish Washer;20180203;1,6;0,2;Pelloponisioi
+Dish Washer;20180204;1,6;0,2;Pelloponisioi
+Dish Washer;20180205;1,6;0,2;Pelloponisioi
+Dish Washer;20180206;1,6;0,2;Pelloponisioi
+Dish Washer;20180207;1,6;0,2;Pelloponisioi
+Dryer;20180201;3,9;0,495;Pelloponisioi
+Dryer;20180202;1,3;0,165;Pelloponisioi
+Dryer;20180203;1,3;0,165;Pelloponisioi
+Dryer;20180204;3,9;0,495;Pelloponisioi
+Dryer;20180205;5,2;0,66;Pelloponisioi
+Dryer;20180206;1,3;0,165;Pelloponisioi
+Dryer;20180207;2,6;0,33;Pelloponisioi
+Fridge-Freezer;20180201;1,06;0,148;Pelloponisioi
+Fridge-Freezer;20180202;1,06;0,148;Pelloponisioi
+Fridge-Freezer;20180203;1,06;0,148;Pelloponisioi
+Fridge-Freezer;20180204;1,06;0,148;Pelloponisioi
+Fridge-Freezer;20180205;1,06;0,148;Pelloponisioi
+Fridge-Freezer;20180206;1,06;0,148;Pelloponisioi
+Fridge-Freezer;20180207;1,06;0,148;Pelloponisioi
+Microwave Oven;20180201;0,12;0,001;Pelloponisioi
+Microwave Oven;20180202;0,36;0,218;Pelloponisioi
+Microwave Oven;20180203;0,48;0,072;Pelloponisioi
+Microwave Oven;20180204;0,36;0,054;Pelloponisioi
+Microwave Oven;20180205;0,12;0,018;Pelloponisioi
+Microwave Oven;20180206;0,24;0,198;Pelloponisioi
+Microwave Oven;20180207;0,12;0,018;Pelloponisioi
+Oven;20180201;5,48;0,73;Pelloponisioi
+Oven;20180202;5,48;0,73;Pelloponisioi
+Oven;20180203;5,48;0,73;Pelloponisioi
+Oven;20180204;5,48;0,73;Pelloponisioi
+Oven;20180205;5,48;0,73;Pelloponisioi
+Oven;20180206;10,96;1,46;Pelloponisioi
+Oven;20180207;8,71;1,18;Pelloponisioi
+Television;20180201;0,32;0,045;Pelloponisioi
+Television;20180202;0,32;0,045;Pelloponisioi
+Television;20180203;0,32;0,045;Pelloponisioi
+Television;20180204;0,32;0,045;Pelloponisioi
+Television;20180205;0,32;0,045;Pelloponisioi
+Television;20180206;0,32;0,045;Pelloponisioi
+Television;20180207;0,32;0,045;Pelloponisioi
+Toaster;20180201;0,9;0,124;Pelloponisioi
+Toaster;20180202;0,45;0,019;Pelloponisioi
+Toaster;20180203;0,9;0,124;Pelloponisioi
+Toaster;20180204;0,9;0,124;Pelloponisioi
+Toaster;20180205;0,9;0,124;Pelloponisioi
+Toaster;20180206;0,9;0,124;Pelloponisioi
+Toaster;20180207;0,9;0,124;Pelloponisioi
+Washing Machine;20180201;1,8;0,22;Pelloponisioi
+Washing Machine;20180202;1,4;0,17;Pelloponisioi
+Washing Machine;20180203;1,8;0,22;Pelloponisioi
+Washing Machine;20180204;4,6;0,56;Pelloponisioi
+Washing Machine;20180205;6;0,73;Pelloponisioi
+Washing Machine;20180206;1,8;0,22;Pelloponisioi
+Washing Machine;20180207;3,2;0,39;Pelloponisioi
+Water heater;20180201;7,8;0,99;Pelloponisioi
+Water heater;20180202;10,4;1,32;Pelloponisioi
+Water heater;20180203;6,6;0,838;Pelloponisioi
+Water heater;20180204;7,8;0,99;Pelloponisioi
+Water heater;20180205;5,2;0,66;Pelloponisioi
+Water heater;20180206;10,4;1,32;Pelloponisioi
+Water heater;20180207;5,2;0,66;Pelloponisioi
