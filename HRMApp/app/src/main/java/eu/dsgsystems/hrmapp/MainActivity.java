@@ -4,14 +4,21 @@ import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    public static String OPENHAB_URL = "https://demo.openhab.org:8443/basicui/app";
+    public static String FACEBOOK_URL = "https://www.facebook.com/profile.php?id=100004300365767";
+    public static String FACEBOOK_PAGE_ID = "100004300365767";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +33,30 @@ public class MainActivity extends AppCompatActivity {
         Toast toast = Toast.makeText(context, String.valueOf(text), duration);
         toast.show();
 
+        final Button b2 = findViewById(R.id.button2);
+        b2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                notImplemented();
+            }
+        });
+
+        final Button b3 = findViewById(R.id.button3);
+        b3.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                notImplemented();
+            }
+        });
+
+    }
+
+
+    private void notImplemented() {
+        Context context = getApplicationContext();
+        CharSequence text = "Η επιλογή δεν έχει υλοποιηθεί ακόμα.";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, String.valueOf(text), duration);
+        toast.show();
     }
 
     @Override
@@ -72,17 +103,47 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void facebook() {
-        Context context = getApplicationContext();
-        CharSequence text = "Η δυνατότητα δεν υλοποιήθηκε ακόμα";
-        int duration = Toast.LENGTH_SHORT;
+        Intent facebookIntent = new Intent(Intent.ACTION_VIEW);
+        String facebookUrl = getFacebookPageURL(this);
+        facebookIntent.setData(Uri.parse(facebookUrl));
+        startActivity(facebookIntent);
+    }
 
-        Toast toast = Toast.makeText(context, String.valueOf(text), duration);
-        toast.show();
+    //method to get the right URL to use in the intent
+    public String getFacebookPageURL(Context context) {
+        PackageManager packageManager = context.getPackageManager();
+        try {
+            int versionCode = packageManager.getPackageInfo("com.facebook.katana", 0).versionCode;
+            if (versionCode >= 3002850) { //newer versions of fb app
+                return "fb://facewebmodal/f?href=" + FACEBOOK_URL;
+            } else { //older versions of fb app
+                return "fb://page/" + FACEBOOK_PAGE_ID;
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            return FACEBOOK_URL; //normal web url
+        }
     }
 
     private void automationMenu() {
+    Intent openHABIntent = new Intent(Intent.ACTION_VIEW);
+    String openHABUrl = getOpenHABUrl(this);
+    openHABIntent.setData(Uri.parse(openHABUrl));
+    startActivity(openHABIntent);
+    }
 
-        openApp(this, "org.openhab.habdroid.ui.OpenHABMainActivity");
+    private String getOpenHABUrl(Context context) {
+        PackageManager packageManager = context.getPackageManager();
+        Intent i = packageManager.getLaunchIntentForPackage("org.openhab.habdroid.ui.OpenHABMainActivity");
+        if (i == null)
+        {
+            CharSequence text = "Η δυνατότητα δεν υλοποιήθηκε ακόμα";
+            int duration = Toast.LENGTH_SHORT;
+
+            Toast toast = Toast.makeText(context, String.valueOf(text), duration);
+            toast.show();
+        }
+        return OPENHAB_URL;
+
     }
 
     private void userProfile() {

@@ -15,13 +15,111 @@
         android:layout_marginEnd="11dp"
         android:drawableTop="@drawable/ic_info_black_24dp" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/button2"
-        android:layout_marginStart="11dp"
-        android:drawableTop="@drawable/ic_refresh_black_24dp" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/userinfo"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:labelFor="@+id/editText1"
+            android:singleLine="true"
+            android:text="@string/username"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:labelFor="@+id/editText2"
+            android:singleLine="true"
+            android:text="@string/household"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="10dp"
+            android:src="@mipmap/avatar"
+            android:contentDescription="@string/avatar" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:text="@string/selectavatar" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="-50dp"
+            android:text="@string/selectteam" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/teaminfo"
+            android:textAlignment="center"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/teamname"
+            android:labelFor="@+id/editText4"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/teammembers" />
+
+        <ImageView
+            android:id="@+id/teamlogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/kriti"
+            android:layout_marginStart="200dp"
+            android:layout_marginTop="-100dp"
+            android:contentDescription="@string/avatar" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="170dp"
+            android:text="@string/teamlogo" />
+
+
+    </LinearLayout>
 
 </RelativeLayout>

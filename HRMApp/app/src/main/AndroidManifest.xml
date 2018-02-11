@@ -21,7 +21,12 @@
             android:label="@string/title_activity_statistics" />
         <activity
             android:name=".UserProfile"
-            android:label="@string/title_activity_user_profile" />
+            android:label="@string/title_activity_user_profile"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SelectAvatar"
+            android:label="@string/title_activity_select_avatar"
+            android:screenOrientation="portrait" />
         <activity android:name=".BarChartActivity" />
         <activity android:name=".BubbleChartActivity"/>
     </application>

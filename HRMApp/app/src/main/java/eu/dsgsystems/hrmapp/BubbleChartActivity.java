@@ -1,6 +1,6 @@
 package eu.dsgsystems.hrmapp;
 
-        import android.graphics.Color;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -71,7 +71,7 @@ public class BubbleChartActivity extends DemoBase implements OnSeekBarChangeList
         Legend l = mChart.getLegend();
         l.setVerticalAlignment(Legend.LegendVerticalAlignment.TOP);
         l.setHorizontalAlignment(Legend.LegendHorizontalAlignment.RIGHT);
-        l.setOrientation(Legend.LegendOrientation.VERTICAL);
+        l.setOrientation(Legend.LegendOrientation.HORIZONTAL);
         l.setDrawInside(false);
         l.setTypeface(mTfLight);
 
@@ -117,7 +117,7 @@ public class BubbleChartActivity extends DemoBase implements OnSeekBarChangeList
 
         ArrayList<BubbleEntry> yVals1 = new ArrayList<BubbleEntry>();
         ArrayList<BubbleEntry> yVals2 = new ArrayList<BubbleEntry>();
-        ArrayList<BubbleEntry> yVals3 = new ArrayList<BubbleEntry>();
+        //ArrayList<BubbleEntry> yVals3 = new ArrayList<BubbleEntry>();
 
         for (int i = 0; i < count; i++) {
             float val = (float) (Math.random() * range);
@@ -133,33 +133,33 @@ public class BubbleChartActivity extends DemoBase implements OnSeekBarChangeList
             yVals2.add(new BubbleEntry(i, val, size, getResources().getDrawable(R.drawable.star)));
         }
 
-        for (int i = 0; i < count; i++) {
+     /*   for (int i = 0; i < count; i++) {
             float val = (float) (Math.random() * range);
             float size = (float) (Math.random() * range);
 
             yVals3.add(new BubbleEntry(i, val, size));
-        }
+        } */
 
         // create a dataset and give it a type
-        BubbleDataSet set1 = new BubbleDataSet(yVals1, "DS 1");
+        BubbleDataSet set1 = new BubbleDataSet(yVals1, "Krhtikoi");
         set1.setDrawIcons(false);
         set1.setColor(ColorTemplate.COLORFUL_COLORS[0], 130);
         set1.setDrawValues(true);
 
-        BubbleDataSet set2 = new BubbleDataSet(yVals2, "DS 2");
+        BubbleDataSet set2 = new BubbleDataSet(yVals2, "Peloponisioi");
         set2.setDrawIcons(false);
         set2.setIconsOffset(new MPPointF(0, 15));
         set2.setColor(ColorTemplate.COLORFUL_COLORS[1], 130);
         set2.setDrawValues(true);
 
-        BubbleDataSet set3 = new BubbleDataSet(yVals3, "DS 3");
+     /*   BubbleDataSet set3 = new BubbleDataSet(yVals3, "DS 3");
         set3.setColor(ColorTemplate.COLORFUL_COLORS[2], 130);
-        set3.setDrawValues(true);
+        set3.setDrawValues(true); */
 
         ArrayList<IBubbleDataSet> dataSets = new ArrayList<IBubbleDataSet>();
         dataSets.add(set1); // add the datasets
         dataSets.add(set2);
-        dataSets.add(set3);
+     //   dataSets.add(set3);
 
         // create a data object with the datasets
         BubbleData data = new BubbleData(dataSets);

@@ -6,7 +6,25 @@
     <string name="Item4">Community Net</string>
     <string name="Item5">Statistics</string>
     <string name="Item6">Exit</string>
+    <string name="username">User Name</string>
+    <string name="household">Household</string>
+    <string name="selectavatar">Select Avatar</string>
+    <string name="selectteam">Select Team</string>
+    <string name="avatar">Avatar</string>
+    <string name="userinfo">User Information</string>
+    <string name="teaminfo">Team Information</string>
+    <string name="teamname">Team Name</string>
+    <string name="teammembers">Team Members</string>
+    <string name="teamlogo">Select Team Logo</string>
+    <string name="save"> Save</string>
     <string name="title_activity_user_profile">User Profile</string>
     <string name="title_activity_statistics">Statistics</string>
+    <string name="title_activity_select_avatar">Select Avatar</string>
+    <string name="avatar_x_menu">Επιλέξτε μια από τις φιγούρες (avatar) για την εμφάνιση σας στο παιχνίδι. Χρησιμοποιήστε το βέλος που δείχνει προς τα πάνω για την προηγούμενη φιγούρα, το βέλος που δείχνει προς τα κάτω για την επόμενη.Με το Save βγαίνεται από την οθόνη επιλογής φιγούρας και αποθηκεύεται την επιλογή σας (η αποθήκευση δεν έχει υλοποιηθεί).</string>
+    <string name="image1">Πίκατσου</string>
+    <string name="image2">Πιγκουίνος</string>
+    <string name="image3">Φλάφυ</string>
+    <string name="todo">TODO</string>
+
     <!-- Strings related to Settings -->
 </resources>

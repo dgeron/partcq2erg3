@@ -24,8 +24,8 @@ public class Statistics extends AppCompatActivity implements AdapterView.OnItemC
 
         ArrayList<ContentItem> objects = new ArrayList<ContentItem>();
 
-        objects.add(new ContentItem("Bar Chart", "A simple demonstration of the bar chart."));
-        objects.add(new ContentItem("Bubble Chart", "A simple demonstration of the bubble chart."));
+        objects.add(new ContentItem("Teams Scores", "A bar chart of the Teams Scores."));
+        objects.add(new ContentItem("Team Consumption", "A bubble chart of daily electricity consumption by each team."));
 
         MyAdapter adapter = new MyAdapter(this, objects);
 
@@ -67,9 +67,6 @@ public class Statistics extends AppCompatActivity implements AdapterView.OnItemC
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.Item1:
-                userProfile();
-                return true;
-            case R.id.Item2:
                 finishAndRemoveTask();
                 return true;
             default:

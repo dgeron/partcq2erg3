@@ -1,6 +1,6 @@
 package eu.dsgsystems.hrmapp;
 
-        import android.annotation.SuppressLint;
+import android.annotation.SuppressLint;
 import android.graphics.RectF;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,8 +32,8 @@ import com.github.mikephil.charting.utils.MPPointF;
 
 import java.util.ArrayList;
 
-import eu.dsgsystems.hrmapp.custom.DayAxisValueFormatter;
-import eu.dsgsystems.hrmapp.custom.MyAxisValueFormatter;
+import eu.dsgsystems.hrmapp.custom.MyAxisPointsFormatter;
+import eu.dsgsystems.hrmapp.custom.MyCustomFormatter;
 import eu.dsgsystems.hrmapp.custom.XYMarkerView;
 
 public class BarChartActivity extends DemoBase implements OnSeekBarChangeListener,
@@ -66,26 +66,27 @@ public class BarChartActivity extends DemoBase implements OnSeekBarChangeListene
 
         // if more than 60 entries are displayed in the chart, no values will be
         // drawn
-        mChart.setMaxVisibleValueCount(60);
+        mChart.setMaxVisibleValueCount(2);
 
         // scaling can now only be done on x- and y-axis separately
         mChart.setPinchZoom(false);
 
         mChart.setDrawGridBackground(false);
-        // mChart.setDrawYLabels(false);
+        //mChart.setDrawYLabels(false);
 
-        IAxisValueFormatter xAxisFormatter = new DayAxisValueFormatter(mChart);
-
+       //IAxisValueFormatter xAxisFormatter = new DayAxisValueFormatter(mChart);
+        IAxisValueFormatter xAxisFormatter = new MyCustomFormatter();
         XAxis xAxis = mChart.getXAxis();
         xAxis.setPosition(XAxisPosition.BOTTOM);
         xAxis.setTypeface(mTfLight);
+        xAxis.setLabelCount(2, true);
         xAxis.setDrawGridLines(false);
         xAxis.setGranularity(1f); // only intervals of 1 day
         xAxis.setLabelCount(7);
         xAxis.setValueFormatter(xAxisFormatter);
 
-        IAxisValueFormatter custom = new MyAxisValueFormatter();
-
+        //IAxisValueFormatter custom = new MyAxisValueFormatter();
+        IAxisValueFormatter custom = new MyAxisPointsFormatter();
         YAxis leftAxis = mChart.getAxisLeft();
         leftAxis.setTypeface(mTfLight);
         leftAxis.setLabelCount(8, false);
@@ -111,23 +112,23 @@ public class BarChartActivity extends DemoBase implements OnSeekBarChangeListene
         l.setFormSize(9f);
         l.setTextSize(11f);
         l.setXEntrySpace(4f);
-        // l.setExtra(ColorTemplate.VORDIPLOM_COLORS, new String[] { "abc",
-        // "def", "ghj", "ikl", "mno" });
-        // l.setCustom(ColorTemplate.VORDIPLOM_COLORS, new String[] { "abc",
+        l.setExtra(ColorTemplate.VORDIPLOM_COLORS, new String[] { "Krhtikoi",
+        "Peloponisioi"});
+        //l.setCustom(ColorTemplate.VORDIPLOM_COLORS, new String[] { "abc",
         // "def", "ghj", "ikl", "mno" });
 
         XYMarkerView mv = new XYMarkerView(this, xAxisFormatter);
         mv.setChartView(mChart); // For bounds control
         mChart.setMarker(mv); // Set the marker to the chart
 
-        setData(12, 50);
+        setData(1, 5000);
 
         // setting data
-        mSeekBarY.setProgress(50);
-        mSeekBarX.setProgress(12);
+       // mSeekBarY.setProgress(1);
+       // mSeekBarX.setProgress(1);
 
-        mSeekBarY.setOnSeekBarChangeListener(this);
-        mSeekBarX.setOnSeekBarChangeListener(this);
+        //mSeekBarY.setOnSeekBarChangeListener(this);
+        //mSeekBarX.setOnSeekBarChangeListener(this);
 
         // mChart.setDrawLegend(false);
     }
@@ -196,7 +197,7 @@ public class BarChartActivity extends DemoBase implements OnSeekBarChangeListene
             mChart.getData().notifyDataChanged();
             mChart.notifyDataSetChanged();
         } else {
-            set1 = new BarDataSet(yVals1, "The year 2017");
+            set1 = new BarDataSet(yVals1, "Teams");
 
             set1.setDrawIcons(false);
 
